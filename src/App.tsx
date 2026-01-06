@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router'
 import Theme from '@/components/template/Theme'
 import Layout from '@/components/layouts'
 import { AuthProvider } from '@/auth'
@@ -13,13 +12,11 @@ if (appConfig.enableMock) {
 function App() {
     return (
         <Theme>
-            <BrowserRouter>
-                <AuthProvider>
-                    <Layout>
-                        <Views />
-                    </Layout>
-                </AuthProvider>
-            </BrowserRouter>
+            <AuthProvider>
+                <Layout>
+                    <Views />
+                </Layout>
+            </AuthProvider>
         </Theme>
     )
 }
